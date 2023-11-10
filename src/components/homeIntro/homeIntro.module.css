@@ -1,0 +1,115 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    margin-left: 5vw;
+    padding-bottom: 5rem;
+    color: var(--text-color);
+}
+
+.bigText {
+    line-height: 5rem;
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+}
+.bigText:last-child {
+    color: var(--name-letter-color);
+}
+.smallTextContainer {
+    max-width: 38vw;
+}
+.smallText {
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+    word-spacing: 0.15rem;
+    color: var(--text-color-small);
+}
+.buttonRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.themeButtonContainer {
+    display: none;
+}
+@media all and (max-width: 1280px) {
+    .smallTextContainer {
+        max-width: 50vw;
+    }
+}
+@media all and (max-width: 1080px) {
+    .bigText {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    .smallTextContainer {
+        max-width: 45vw;
+    }
+    .smallText {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+    .buttonRow {
+        margin: 1.5rem 0;
+    }
+}
+@media all and (max-width: 920px) {
+    .smallTextContainer {
+        max-width: 55vw;
+    }
+}
+@media all and (max-width: 780px) {
+    .container {
+        padding-bottom: 2rem;
+    }
+    .smallTextContainer {
+        max-width: 65vw;
+    }
+    .themeButtonContainer {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 3rem;
+        right: 15%;
+    }
+}
+@media all and (max-width: 580px) {
+    .bigText {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+    .smallTextContainer {
+        max-width: 75vw;
+    }
+    .smallText {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+    .buttonRow {
+        margin: 1.5rem 0;
+    }
+}
+@media all and (max-width: 460px) {
+    .bigText {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .smallTextContainer {
+        max-width: 90vw;
+    }
+}
+@media all and (max-width: 350px) {
+    .bigText {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+    .smallTextContainer {
+        max-width: 93vw;
+    }
+    .buttonRow {
+        gap: 1.5rem;
+    }
+}

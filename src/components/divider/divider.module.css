@@ -1,0 +1,6 @@
+.divider {
+    border-left: 2px solid var(--name-letter-color);
+    min-height: 5rem;
+    height: 5rem;
+    margin-left: 1rem;
+}

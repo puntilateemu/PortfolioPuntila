@@ -1,0 +1,32 @@
+.container {
+    width: 100%;
+    position: absolute;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem 4rem;
+}
+.miniApp {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+}
+.themeButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media all and (max-width: 780px) {
+    .container {
+        justify-content: center;
+    }
+    .themeButtonContainer {
+        display: none;
+    }
+}

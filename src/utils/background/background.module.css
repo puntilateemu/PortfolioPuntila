@@ -1,0 +1,33 @@
+.containerInitial {
+    background: var(--background-color);
+}
+.containerReveal {
+    animation-delay: 0.1s;
+    animation: reveal 1s forwards;
+}
+.containerReavealReverse {
+    animation-delay: 0.1s;
+    animation: reveal-reverse 1s forwards;
+}
+@keyframes reveal-reverse {
+    0% {
+        background-size: 150% 100%;
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-size: 100% 100%;
+        background-position: 100% 100%;
+    }
+}
+@keyframes reveal {
+    0% {
+        background-size: 100% 100%;
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-size: 150% 100%;
+        background-position: 100% 100%;
+    }
+}

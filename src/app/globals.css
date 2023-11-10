@@ -1,18 +1,110 @@
 :root {
+    color-scheme: dark light;
+    background: radial-gradient(
+        circle at right,
+        #004656 0%,
+        #0c3439 12%,
+        #000000 100%
+    );
+    --navigation-outer-container: #9681eb;
+    --navigation-inner-container: #48c4d2;
+    --navigation-icon-color: invert(100%) sepia(100%) saturate(0%)
+        hue-rotate(138deg) brightness(103%) contrast(101%);
+    --social-icon-color: invert(16%) sepia(44%) saturate(6519%)
+        hue-rotate(178deg) brightness(94%) contrast(101%);
+    --social-icon-color-hover: invert(74%) sepia(55%) saturate(445%)
+        hue-rotate(136deg) brightness(82%) contrast(100%);
+    --text-color: white;
+    --mini-app-color: rgba(0, 0, 0, 0.4);
+    --text-color-button-fill: #000000;
+    --text-color-small: #005d72;
+    --name-letter-color: #48c4d2;
+    --background-color: radial-gradient(
+        circle at right,
+        #004656 0%,
+        #0c3439 12%,
+        #000000 100%
+    );
+    --background-color-transition-end: radial-gradient(
+        circle at left,
+        #004656 0%,
+        #0c3439 12%,
+        #000000 100%
+    );
+    --code-title-color: #48c4d2;
 }
 
 /* DARK MODE SETTINGS */
 [data-theme='dark'] {
+    --text-color: white;
+    --text-color-button-fill: #000000;
+    --text-color-small: #005d72;
+    --name-letter-color: #48c4d2;
+    --navigation-outer-container: #9681eb;
+    --mini-app-color: rgba(0, 0, 0, 0.4);
+    --navigation-inner-container: #48c4d2;
+    --navigation-icon-color: invert(100%) sepia(100%) saturate(0%)
+        hue-rotate(138deg) brightness(103%) contrast(101%);
+    --social-icon-color: invert(16%) sepia(44%) saturate(6519%)
+        hue-rotate(178deg) brightness(94%) contrast(101%);
+    --social-icon-color-hover: invert(74%) sepia(55%) saturate(445%)
+        hue-rotate(136deg) brightness(82%) contrast(100%);
+    --background-color: radial-gradient(
+        circle at right,
+        #004656 0%,
+        #0c3439 12%,
+        #000000 100%
+    );
+    --background-color-transition-end: radial-gradient(
+        circle at left,
+        #004656 0%,
+        #0c3439 12%,
+        #000000 100%
+    );
+    --code-title-color: #48c4d2;
 }
 
 /* LIGHT MODE SETTINGS */
 [data-theme='light'] {
+    --text-color: black;
+    --text-color-button-fill: #ffffff;
+    --text-color-small: #004656;
+    --name-letter-color: #0c3439;
+    --navigation-outer-container: #004656;
+    --mini-app-color: rgba(0, 0, 0, 0.7);
+    --navigation-inner-container: #0c3439;
+    --navigation-icon-color: invert(0%) sepia(2%) saturate(0%) hue-rotate(65deg)
+        brightness(100%) contrast(103%);
+    --social-icon-color: invert(21%) sepia(23%) saturate(2775%)
+        hue-rotate(154deg) brightness(95%) contrast(101%);
+
+    --social-icon-color-hover: invert(74%) sepia(55%) saturate(445%)
+        hue-rotate(136deg) brightness(82%) contrast(100%);
+    --background-color: radial-gradient(
+        circle at right,
+        #004656 0%,
+        #165e67 0%,
+        #ffffff 100%
+    );
+    --background-color-transition-end: radial-gradient(
+        circle at left,
+        #004656 0%,
+        #165e67 0%,
+        #ffffff 100%
+    );
+    --code-title-color: #004656;
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 html,

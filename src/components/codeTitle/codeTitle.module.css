@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.title {
+    margin-right: 0.8rem;
+    letter-spacing: 0.15rem;
+    color: var(--text-color);
+}
+
+.code {
+    color: var(--code-title-color);
+}

@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    min-width: 320px;
+    overflow: hidden;
+    max-width: 320px;
+    height: 600px;
+    border-radius: 20px;
+    background: var(--background-color);
+    transform-style: preserve-3d;
+    transform: rotateY(-10deg) rotateX(10deg) rotateZ(5deg);
+    box-shadow: 50px 20px 20px -10px rgba(8, 25, 30, 0.5);
+    margin-right: 20vw;
+    border: 3px solid black;
+}
+
+@media all and (max-width: 1280px) {
+    .container {
+        margin-right: 10vw;
+    }
+}
+@media all and (max-width: 1080px) {
+    .container {
+        margin-right: 9vw;
+    }
+}
+@media all and (max-width: 980px) {
+    .container {
+        display: none;
+    }
+}

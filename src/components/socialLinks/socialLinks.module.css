@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+.icon {
+    width: 2rem;
+    height: 2rem;
+    filter: var(--social-icon-color);
+    transition-duration: 0.15s;
+}
+.icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    filter: var(--social-icon-color-hover);
+}
+@media all and (max-width: 780px) {
+    .icon:hover {
+        cursor: pointer;
+        transform: scale(1);
+        filter: var(--social-icon-color);
+    }
+}

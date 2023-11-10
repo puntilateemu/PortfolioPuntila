@@ -1,9 +1,14 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Lato } from 'next/font/google'
 import { Theme } from '@/state/context/theme'
 import './globals.css'
+import NavBar from '@/components/navBar/navBar'
+import Background from '@/utils/background/background'
 
-const inter = Inter({ subsets: ['latin'] })
+const lato = Lato({
+    subsets: ['latin'],
+    weight: '400',
+})
 
 export const metadata: Metadata = {
     metadataBase: new URL(`https://puntilachain.com`),
@@ -50,9 +55,13 @@ export default function RootLayout({
                 />
                 <meta name="twitter:image" content="/favicon.png" />
             </head>
-            <body className={inter.className}>
-                {' '}
-                <Theme>{children}</Theme>
+            <body className={lato.className}>
+                <Theme>
+                    <Background>
+                        <NavBar />
+                        {children}
+                    </Background>
+                </Theme>
             </body>
         </html>
     )
