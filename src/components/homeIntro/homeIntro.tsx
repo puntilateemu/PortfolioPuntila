@@ -16,11 +16,11 @@ const HomeIntro = () => {
                 <p className={styles.smallText}>
                     C# / C++ / Assembly / Flutter / Java / Python / JavaScript /
                     TypeScript / React / NextJS / React-Native / Angular /
-                    NodeJS
+                    NodeJS / MariaDB / AWS / FireBase
                 </p>
             </div>
             <div className={styles.buttonRow}>
-                <Button text="My Work" buttonStyle="fill" />
+                <Button url="/portfolio" text="My Work" buttonStyle="fill" />
                 <Button text="Hire Me" buttonStyle="empty" />
             </div>
             <SocialLinks />

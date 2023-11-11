@@ -1,15 +1,15 @@
 .container {
-    border-radius: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 0.8rem 2.5rem;
     width: max-content;
     transition-duration: 0.3s;
     cursor: pointer;
 }
 .fill {
+    padding: 0.8rem 2.5rem;
+    border-radius: 20px;
     background: var(--navigation-inner-container);
     color: var(--text-color-button-fill);
 }
@@ -18,11 +18,22 @@
     color: var(--navigation-inner-container);
 }
 .empty {
+    padding: 0.8rem 2.5rem;
+    border-radius: 20px;
     border: 2px solid var(--navigation-inner-container);
     color: var(--navigation-inner-container);
 }
 .empty:hover {
     border: 2px solid transparent;
+}
+.small {
+    padding: 0.4rem 1.5rem;
+    border-radius: 20px;
+    background: var(--navigation-inner-container);
+    color: var(--text-color-button-fill);
+}
+.small:hover {
+    transform: scale(1.02);
 }
 .text {
     font-size: 1.4rem;
@@ -43,6 +54,11 @@
     font-size: 1rem;
     letter-spacing: 0.1rem;
     font-weight: 700;
+}
+@media all and (max-width: 1280px) {
+    .small:hover {
+        transform: scale(1);
+    }
 }
 @media all and (max-width: 1080px) {
     .container {

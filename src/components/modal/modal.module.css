@@ -1,0 +1,42 @@
+.container {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: 100;
+    background-color: var(--modal-backdrop-color);
+    animation: reveal-backdrop 0.35s ease-in;
+}
+.closed {
+    display: none;
+}
+.modal {
+    width: 80%;
+    height: 80vh;
+    z-index: 110;
+    background: var(--modal-background-color);
+    border-radius: 40px;
+    padding: 1rem;
+    animation: reveal-modal 0.35s ease-in;
+}
+@keyframes reveal-modal {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes reveal-backdrop {
+    from {
+        background-color: var(--modal-backdrop-color-initial);
+    }
+
+    to {
+        background-color: var(--modal-backdrop-color);
+    }
+}
