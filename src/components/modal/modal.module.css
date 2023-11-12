@@ -14,13 +14,39 @@
     display: none;
 }
 .modal {
-    width: 80%;
-    height: 80vh;
+    position: relative;
+    width: 60%;
+    height: 60vh;
     z-index: 110;
     background: var(--modal-background-color);
     border-radius: 40px;
     padding: 1rem;
     animation: reveal-modal 0.35s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentRow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.contentColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 90%;
+    padding: 0 2rem;
+}
+.image {
+    width: 90%;
+    height: 50%;
 }
 @keyframes reveal-modal {
     from {

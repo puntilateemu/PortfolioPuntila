@@ -5,10 +5,10 @@ import HomeIntro from '@/components/homeIntro/homeIntro'
 import MiniApp from '@/components/miniApp/miniApp'
 export const metadata: Metadata = {
     title: 'Teemu Puntila',
-    description: 'Teemu Puntila Portfolio and Projects Webpage.',
+    description: 'Teemu Puntila Portfolio and Resume.',
     openGraph: {
         title: 'Teemu Puntila',
-        description: 'Teemu Puntila Portfolio and Projects Webpage.',
+        description: 'Teemu Puntila Portfolio and Resume.',
 
         images: ['/favicon.ico'],
     },

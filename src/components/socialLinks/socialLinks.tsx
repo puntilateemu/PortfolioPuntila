@@ -10,7 +10,7 @@ import Divider from '../divider/divider'
 const SocialLinks = () => {
     return (
         <div className={styles.container}>
-            <Divider />
+            <Divider height="5rem" margin="0 0 0 1rem" />
             <Image
                 src={linkedInIcon}
                 className={styles.icon}

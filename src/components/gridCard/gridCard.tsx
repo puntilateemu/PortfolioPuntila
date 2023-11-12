@@ -1,28 +1,29 @@
 'use client'
 
 import styles from './gridCard.module.css'
-import fallbackImage from '../../../public/gridEmpty.jpg'
 import Image from 'next/image'
 import Button from '../button/button'
 import Modal from '../modal/modal'
 import { useState } from 'react'
-const GridCard = () => {
+import { portfolio } from '@/types/portfolio'
+
+const GridCard = (portfolio: portfolio) => {
     const [modalOpen, setModalOpen] = useState<boolean>(false)
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.bkImage}>
                     <Image
-                        src={fallbackImage}
+                        src={portfolio.imageFront}
                         className={styles.image}
-                        alt="grid-fallback"
+                        style={{ objectFit: portfolio.objectFit }}
+                        alt={`${portfolio.title}-image`}
                         quality={100}
-                        sizes="100vw"
                     />
                 </div>
                 <div className={styles.infoContainer}>
-                    <h3 className={styles.header}>Testi</h3>
-                    <p className={styles.text}>Test</p>
+                    <h3 className={styles.header}>{portfolio.title}</h3>
+                    <p className={styles.text}>{portfolio.introText}</p>
                     <Button
                         onClick={() => setModalOpen(true)}
                         buttonStyle="small"
@@ -30,7 +31,12 @@ const GridCard = () => {
                     />
                 </div>
             </div>
-            <Modal open={modalOpen} close={() => setModalOpen(false)} />
+
+            <Modal
+                portfolio={portfolio}
+                open={modalOpen}
+                close={() => setModalOpen(false)}
+            />
         </>
     )
 }

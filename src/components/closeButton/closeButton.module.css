@@ -1,0 +1,15 @@
+.image {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    cursor: pointer;
+    filter: var(--social-icon-color);
+    transition-duration: 0.3s;
+}
+.image:hover {
+    transform: scale(1.05);
+    filter: var(--social-icon-color-hover);
+}

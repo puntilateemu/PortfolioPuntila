@@ -8,6 +8,7 @@ import Background from '@/utils/background/background'
 const lato = Lato({
     subsets: ['latin'],
     weight: '400',
+    preload: true,
 })
 
 export const metadata: Metadata = {

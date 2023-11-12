@@ -9,8 +9,17 @@
     box-shadow: 10px 10px 10px 10px rgba(8, 25, 30, 0.5);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    padding: 1rem;
 }
-
+@media all and (min-width: 1280px) {
+    .container:nth-last-child(2) {
+        justify-self: end;
+        width: 30%;
+        height: 30vh;
+        margin-right: 1.5rem;
+        grid-column-start: span 3;
+    }
+}
 .bkImage {
     position: absolute;
     width: 100%;
@@ -33,7 +42,7 @@
     color: var(--text-color);
 }
 .text {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--text-color);
 }
 .container:hover {
@@ -41,7 +50,7 @@
     box-shadow: 12px 12px 12px 12px rgba(8, 25, 30, 0.5);
 }
 .container:hover .bkImage {
-    opacity: 0.6;
+    opacity: 0.4;
 }
 .container:hover .text,
 .header {
@@ -54,6 +63,7 @@
     justify-content: center;
     gap: 1rem;
 }
+
 @media all and (max-width: 1280px) {
     .infoContainer {
         display: flex;
