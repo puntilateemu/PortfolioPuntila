@@ -3,7 +3,11 @@ import SocialLinks from '../socialLinks/socialLinks'
 import ThemeButton from '../themeButton/themeButton'
 import styles from './homeIntroMiniApp.module.css'
 
-const HomeIntroMiniApp = () => {
+interface homeIntroMiniAppProps {
+    onClickMyWork: () => void
+}
+
+const HomeIntroMiniApp = ({ onClickMyWork }: homeIntroMiniAppProps) => {
     return (
         <div className={styles.container}>
             <div>
@@ -20,7 +24,12 @@ const HomeIntroMiniApp = () => {
                 </p>
             </div>
             <div className={styles.buttonRow}>
-                <Button miniApp text="My Work" buttonStyle="fill" />
+                <Button
+                    miniApp
+                    text="My Work"
+                    buttonStyle="fill"
+                    onClick={onClickMyWork}
+                />
                 <Button miniApp text="Hire Me" buttonStyle="empty" />
             </div>
             <SocialLinks />

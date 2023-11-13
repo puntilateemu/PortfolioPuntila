@@ -3,12 +3,13 @@ import styles from './divider.module.css'
 interface dividerProps {
     height: string
     margin?: string
+    hideMobile?: boolean
 }
 
-const Divider = ({ height, margin }: dividerProps) => {
+const Divider = ({ height, margin, hideMobile }: dividerProps) => {
     return (
         <div
-            className={styles.divider}
+            className={hideMobile ? styles.dividerHideMobile : styles.divider}
             style={{ height: height, margin: margin }}
         ></div>
     )

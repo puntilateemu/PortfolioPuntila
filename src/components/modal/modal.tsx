@@ -4,6 +4,8 @@ import CodeTitle from '../codeTitle/codeTitle'
 import CloseButton from '../closeButton/closeButton'
 import Divider from '../divider/divider'
 import Image from 'next/image'
+import DevIcons from '../devIcons/devIcons'
+import PortfolioLinks from '../portfolioLinks/portfolioLinks'
 
 interface modalProps {
     close: () => void
@@ -21,25 +23,67 @@ const Modal = ({ close, portfolio, open }: modalProps) => {
 
     return (
         <div
-            className={open ? styles.container : styles.closed}
+            className={
+                open
+                    ? portfolio.miniApp
+                        ? styles.containerMiniApp
+                        : styles.container
+                    : styles.closed
+            }
             onClick={(e) => handleClose(e)}
         >
-            <div className={styles.modal}>
+            <div
+                className={
+                    portfolio.miniApp ? styles.modalMiniApp : styles.modal
+                }
+            >
                 <CloseButton onCLick={close} />
                 <CodeTitle text={portfolio.title} noCode />
-                <div className={styles.contentRow}>
-                    <div className={styles.contentColumn}>
+                <div
+                    className={
+                        portfolio.miniApp
+                            ? styles.contentRowMiniApp
+                            : styles.contentRow
+                    }
+                >
+                    <div
+                        className={
+                            portfolio.miniApp
+                                ? styles.contentColumnMiniApp
+                                : styles.contentColumn
+                        }
+                    >
                         {portfolio.imageModal && (
                             <Image
-                                className={styles.image}
+                                className={
+                                    portfolio.miniApp
+                                        ? styles.imageMiniApp
+                                        : styles.image
+                                }
                                 src={portfolio.imageModal}
+                                quality={100}
                                 alt={`${portfolio.title}-intro-image`}
                             />
                         )}
+
+                        <DevIcons devIcons={portfolio.devIcons} />
                     </div>
-                    <Divider height="90%" />
-                    <div className={styles.contentColumn}>
+
+                    <Divider height="90%" hideMobile />
+
+                    <div
+                        className={
+                            portfolio.miniApp
+                                ? styles.contentColumnMiniApp
+                                : styles.contentColumn
+                        }
+                    >
                         <p>{portfolio.fullText}</p>
+                        {portfolio.portfolioLinks && (
+                            <PortfolioLinks
+                                portfolioLinks={portfolio.portfolioLinks}
+                            />
+                        )}
                     </div>
                 </div>
             </div>

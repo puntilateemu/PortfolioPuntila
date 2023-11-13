@@ -9,7 +9,16 @@
     justify-items: center;
     align-items: center;
 }
-
+.miniAppContainer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 3rem;
+    justify-items: center;
+    align-items: center;
+}
 @media all and (max-width: 1280px) {
     .container {
         margin: 3rem 0;

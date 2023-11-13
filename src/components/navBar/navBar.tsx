@@ -5,9 +5,17 @@ import styles from './navBar.module.css'
 
 interface navBarProps {
     miniApp?: boolean
+    onClickHome?: () => void
+    onClickPortfolio?: () => void
+    onClickResume?: () => void
 }
 
-const NavBar = ({ miniApp }: navBarProps) => {
+const NavBar = ({
+    miniApp,
+    onClickHome,
+    onClickPortfolio,
+    onClickResume,
+}: navBarProps) => {
     return (
         <div className={!miniApp ? styles.container : styles.miniApp}>
             {!miniApp && (
@@ -15,7 +23,15 @@ const NavBar = ({ miniApp }: navBarProps) => {
                     <ThemeButton />
                 </div>
             )}
-            {!miniApp ? <LinkContainer /> : <LinkContainerMiniApp />}
+            {!miniApp ? (
+                <LinkContainer />
+            ) : (
+                <LinkContainerMiniApp
+                    onClickHome={onClickHome}
+                    onClickPortfolio={onClickPortfolio}
+                    onClickResume={onClickResume}
+                />
+            )}
         </div>
     )
 }

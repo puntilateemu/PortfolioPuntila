@@ -2,6 +2,7 @@
     display: flex;
     min-width: 320px;
     overflow: hidden;
+    overflow-y: scroll;
     max-width: 320px;
     height: 600px;
     border-radius: 20px;
@@ -11,8 +12,22 @@
     box-shadow: 50px 20px 20px -10px rgba(8, 25, 30, 0.5);
     margin-right: 20vw;
     border: 3px solid black;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-
+.container::-webkit-scrollbar {
+    display: none;
+}
+.containerPortfolio {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-top: 2rem;
+}
 @media all and (max-width: 1280px) {
     .container {
         margin-right: 10vw;

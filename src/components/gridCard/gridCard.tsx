@@ -11,8 +11,20 @@ const GridCard = (portfolio: portfolio) => {
     const [modalOpen, setModalOpen] = useState<boolean>(false)
     return (
         <>
-            <div className={styles.container}>
-                <div className={styles.bkImage}>
+            <div
+                className={
+                    portfolio.miniApp
+                        ? styles.containerMiniApp
+                        : styles.container
+                }
+            >
+                <div
+                    className={
+                        portfolio.miniApp
+                            ? styles.bkImageMiniApp
+                            : styles.bkImage
+                    }
+                >
                     <Image
                         src={portfolio.imageFront}
                         className={styles.image}
@@ -21,7 +33,13 @@ const GridCard = (portfolio: portfolio) => {
                         quality={100}
                     />
                 </div>
-                <div className={styles.infoContainer}>
+                <div
+                    className={
+                        portfolio.miniApp
+                            ? styles.infoContainerMiniApp
+                            : styles.infoContainer
+                    }
+                >
                     <h3 className={styles.header}>{portfolio.title}</h3>
                     <p className={styles.text}>{portfolio.introText}</p>
                     <Button

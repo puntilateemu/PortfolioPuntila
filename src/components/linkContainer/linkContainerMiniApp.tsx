@@ -1,11 +1,27 @@
 import styles from './linkContainer.module.css'
 
-const LinkContainerMiniApp = () => {
+export interface linkContainerMiniAppProps {
+    onClickHome?: () => void
+    onClickPortfolio?: () => void
+    onClickResume?: () => void
+}
+
+const LinkContainerMiniApp = ({
+    onClickHome,
+    onClickPortfolio,
+    onClickResume,
+}: linkContainerMiniAppProps) => {
     return (
         <>
-            <p className={styles.linkMiniApp}>home</p>
-            <p className={styles.linkMiniApp}>portfolio</p>
-            <p className={styles.linkMiniApp}>resume</p>
+            <p onClick={onClickHome} className={styles.linkMiniApp}>
+                home
+            </p>
+            <p onClick={onClickPortfolio} className={styles.linkMiniApp}>
+                portfolio
+            </p>
+            <p onClick={onClickResume} className={styles.linkMiniApp}>
+                resume
+            </p>
         </>
     )
 }

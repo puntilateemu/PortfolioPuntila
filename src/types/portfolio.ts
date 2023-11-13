@@ -1,4 +1,6 @@
 import { StaticImport } from 'next/dist/shared/lib/get-img-props'
+import { devIcons } from './devIcons'
+import { portfolioLinks } from './portfolioLinks'
 
 export type portfolio = {
     imageFront: string | StaticImport
@@ -7,6 +9,7 @@ export type portfolio = {
     title: string
     introText: string
     fullText: string
-    websiteLink?: string
-    githubLink?: string
+    devIcons: devIcons
+    portfolioLinks?: portfolioLinks
+    miniApp?: boolean
 }
