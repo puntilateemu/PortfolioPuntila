@@ -14,3 +14,19 @@
     color: var(--input-color);
     line-height: 0;
 }
+@media all and (max-width: 980px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+@media all and (max-width: 680px) {
+    .container {
+        padding-top: 3rem;
+        row-gap: 1.8rem;
+    }
+}
+@media all and (max-width: 580px) {
+    .container {
+        padding-top: 1rem;
+    }
+}

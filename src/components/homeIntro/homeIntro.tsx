@@ -21,7 +21,7 @@ const HomeIntro = () => {
             </div>
             <div className={styles.buttonRow}>
                 <Button url="/portfolio" text="My Work" buttonStyle="fill" />
-                <Button text="Hire Me" buttonStyle="empty" />
+                <Button url="/resume" text="Contact Me" buttonStyle="empty" />
             </div>
             <SocialLinks />
             <div className={styles.themeButtonContainer}>

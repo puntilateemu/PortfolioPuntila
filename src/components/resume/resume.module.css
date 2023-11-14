@@ -41,12 +41,35 @@
         width: 90%;
     }
 }
-@media all and (max-width: 780px) {
+
+@media all and (max-width: 680px) {
+    .image {
+        width: 7rem;
+        height: 7rem;
+    }
+}
+@media all and (max-width: 580px) {
     .container {
+        padding: 1rem;
+    }
+    .headerRow {
+        align-items: center;
         flex-direction: column;
+        gap: 2rem;
+    }
+}
+@media all and (max-width: 530px) {
+    .headerColumn {
+        align-items: center;
     }
 }
 @media all and (max-width: 420px) {
+    .name {
+        font-size: 2rem;
+    }
+    .subTitle {
+        font-size: 1.5rem;
+    }
     .container {
         padding: 1rem;
     }

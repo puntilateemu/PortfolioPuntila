@@ -30,7 +30,7 @@ const HomeIntroMiniApp = ({ onClickMyWork }: homeIntroMiniAppProps) => {
                     buttonStyle="fill"
                     onClick={onClickMyWork}
                 />
-                <Button miniApp text="Hire Me" buttonStyle="empty" />
+                <Button miniApp text="Contact Me" buttonStyle="empty" />
             </div>
             <SocialLinks />
             <div className={styles.themeButtonContainer}>
