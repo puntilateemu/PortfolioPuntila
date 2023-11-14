@@ -23,43 +23,17 @@ const Modal = ({ close, portfolio, open }: modalProps) => {
 
     return (
         <div
-            className={
-                open
-                    ? portfolio.miniApp
-                        ? styles.containerMiniApp
-                        : styles.container
-                    : styles.closed
-            }
+            className={open ? styles.container : styles.closed}
             onClick={(e) => handleClose(e)}
         >
-            <div
-                className={
-                    portfolio.miniApp ? styles.modalMiniApp : styles.modal
-                }
-            >
+            <div className={styles.modal}>
                 <CloseButton onCLick={close} />
                 <CodeTitle text={portfolio.title} noCode />
-                <div
-                    className={
-                        portfolio.miniApp
-                            ? styles.contentRowMiniApp
-                            : styles.contentRow
-                    }
-                >
-                    <div
-                        className={
-                            portfolio.miniApp
-                                ? styles.contentColumnMiniApp
-                                : styles.contentColumn
-                        }
-                    >
+                <div className={styles.contentRow}>
+                    <div className={styles.contentColumn}>
                         {portfolio.imageModal && (
                             <Image
-                                className={
-                                    portfolio.miniApp
-                                        ? styles.imageMiniApp
-                                        : styles.image
-                                }
+                                className={styles.image}
                                 src={portfolio.imageModal}
                                 quality={100}
                                 alt={`${portfolio.title}-intro-image`}
@@ -71,13 +45,7 @@ const Modal = ({ close, portfolio, open }: modalProps) => {
 
                     <Divider height="90%" hideMobile />
 
-                    <div
-                        className={
-                            portfolio.miniApp
-                                ? styles.contentColumnMiniApp
-                                : styles.contentColumn
-                        }
-                    >
+                    <div className={styles.contentColumn}>
                         <p>{portfolio.fullText}</p>
                         {portfolio.portfolioLinks && (
                             <PortfolioLinks

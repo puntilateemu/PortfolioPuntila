@@ -30,6 +30,8 @@
     --modal-background-color: #004656;
     --modal-backdrop-color-initial: rgba(0, 0, 0, 0);
     --modal-backdrop-color: rgba(0, 0, 0, 0.4);
+    --input-color: #48c4d2;
+    --input-background-color: #004656;
 }
 
 /* DARK MODE SETTINGS */
@@ -63,6 +65,8 @@
     --modal-background-color: #004656;
     --modal-backdrop-color-initial: rgba(0, 0, 0, 0);
     --modal-backdrop-color: rgba(0, 0, 0, 0.4);
+    --input-color: #48c4d2;
+    --input-background-color: #004656;
 }
 
 /* LIGHT MODE SETTINGS */
@@ -97,6 +101,8 @@
     --modal-background-color: #57abb7;
     --modal-backdrop-color-initial: rgba(255, 255, 255, 0);
     --modal-backdrop-color: rgba(255, 255, 255, 0.4);
+    --input-color: #48c4d2;
+    --input-background-color: #004656;
 }
 
 * {

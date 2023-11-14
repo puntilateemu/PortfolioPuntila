@@ -43,7 +43,7 @@ const GridCard = (portfolio: portfolio) => {
                     <h3 className={styles.header}>{portfolio.title}</h3>
                     <p className={styles.text}>{portfolio.introText}</p>
                     <Button
-                        onClick={() => setModalOpen(true)}
+                        onClick={() => !portfolio.miniApp && setModalOpen(true)}
                         buttonStyle="small"
                         text="View More"
                     />
