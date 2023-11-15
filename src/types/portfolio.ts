@@ -13,3 +13,12 @@ export type portfolio = {
     portfolioLinks?: portfolioLinks
     miniApp?: boolean
 }
+
+export type portfolioStatic = {
+    imageFront: string | StaticImport
+    title: string
+    codeTitle: string
+    fullText: string
+    devIcons: devIcons
+    portfolioLinks?: portfolioLinks
+}

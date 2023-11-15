@@ -4,7 +4,7 @@
     width: 100%;
     gap: 2rem;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .link {
@@ -12,9 +12,4 @@
     color: var(--text-color);
     text-decoration: underline;
     cursor: pointer;
-}
-@media all and (max-width: 780px) {
-    .container {
-        justify-content: center;
-    }
 }

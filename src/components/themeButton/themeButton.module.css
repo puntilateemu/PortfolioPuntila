@@ -17,8 +17,7 @@
     width: 1.5rem;
     height: 1.5rem;
     filter: var(--navigation-icon-color);
-    animation: reveal 1s ease-in-out;
-    transition-duration: 0.3s;
+    animation: reveal 0.3s ease-in-out;
 }
 .imgNotActive {
     width: 1.5rem;

@@ -1,8 +1,7 @@
 'use client'
 
-import { Dispatch, createContext, useEffect, useReducer } from 'react'
-import { ThemeActions, Types, themeReducer } from '../reducer/theme'
-import { handleSavedTheme } from '@/utils/theme/handleSavedTheme'
+import { Dispatch, createContext, useReducer } from 'react'
+import { ThemeActions, themeReducer } from '../reducer/theme'
 
 type InitialStateType = {
     theme: 'dark' | 'light'
@@ -26,18 +25,6 @@ const mainReducer = ({ theme }: InitialStateType, action: ThemeActions) => ({
 
 const Theme = ({ children }: { children: React.ReactNode }) => {
     const [state, dispatch] = useReducer(mainReducer, initialState)
-
-    useEffect(() => {
-        const theme = handleSavedTheme(state.theme)
-
-        theme &&
-            dispatch({
-                type: Types.Change,
-                payload: {
-                    theme: 'light',
-                },
-            })
-    }, [state.theme])
 
     return (
         <ThemeContext.Provider value={{ state, dispatch }}>

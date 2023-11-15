@@ -19,7 +19,7 @@ const PortfolioGrid = ({ miniApp }: portfolioGridProps) => {
     return (
         <div className={miniApp ? styles.miniAppContainer : styles.container}>
             <GridCard
-                title="Robo-News"
+                title="robo-news"
                 introText="News site with 100% AI generated content, built with NextJs, NodeJs, Express and MariaDb"
                 imageFront={roboNewsImage}
                 objectFit="cover"
@@ -38,7 +38,7 @@ const PortfolioGrid = ({ miniApp }: portfolioGridProps) => {
                 miniApp={miniApp}
             />
             <GridCard
-                title="Portfolio"
+                title="portfolio"
                 introText="Portfolio site built with NextJs and 100% custom components."
                 imageFront={portfolioImage}
                 objectFit="contain"
@@ -54,7 +54,7 @@ const PortfolioGrid = ({ miniApp }: portfolioGridProps) => {
                 miniApp={miniApp}
             />
             <GridCard
-                title="Blogfeel"
+                title="blogfeel"
                 introText="Blog-Application for Android and IoS, built with React-native, NodeJs, Express and MariaDb"
                 imageFront={blogfeelImage}
                 objectFit="cover"
@@ -75,7 +75,7 @@ const PortfolioGrid = ({ miniApp }: portfolioGridProps) => {
                 miniApp={miniApp}
             />
             <GridCard
-                title="Home-App"
+                title="home-app"
                 introText="Control everything from server to Alexa with this mobile app, built with React-Native, NodeJs and Express"
                 imageFront={homeAppImage}
                 objectFit="contain"

@@ -23,10 +23,6 @@ const ThemeButton = () => {
                         theme: state.theme === 'dark' ? 'light' : 'dark',
                     },
                 })
-                localStorage.setItem(
-                    'theme',
-                    state.theme === 'dark' ? 'light' : 'dark'
-                )
                 setTransition(styles.imgNotActive)
                 setTimeout(() => {
                     setTransition(styles.img)
