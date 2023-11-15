@@ -9,13 +9,13 @@ type Props = {
     params: { title: string }
 }
 
-export const getStaticPaths = (async () => {
+export const getStaticPaths: GetStaticPaths<{ title: string }> = async () => {
     const paths = await getAllPortfolioPaths()
     return {
         paths,
         fallback: false,
     }
-}) satisfies GetStaticPaths
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
