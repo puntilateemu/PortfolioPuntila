@@ -9,7 +9,7 @@
 
 .link {
     font-size: 1.1rem;
-    color: var(--text-color);
+    color: white;
     text-decoration: underline;
     cursor: pointer;
 }
