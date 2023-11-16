@@ -2,10 +2,17 @@ import ContactForm from '../contactForm/contactForm'
 import ContactInfo from '../contactInfo/contactInfo'
 import styles from './contact.module.css'
 
-const Contact = () => {
+interface contactProps {
+    miniApp?: boolean
+}
+
+const Contact = ({ miniApp }: contactProps) => {
     return (
-        <div className={styles.container} id="Contact">
-            <ContactInfo />
+        <div
+            className={miniApp ? styles.containerMiniApp : styles.container}
+            id="Contact"
+        >
+            <ContactInfo miniApp={miniApp} />
             <ContactForm />
         </div>
     )

@@ -10,6 +10,17 @@
     gap: 10%;
     box-shadow: 10px 10px 10px rgba(8, 25, 30, 0.5);
 }
+.containerMiniApp {
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--input-background-color);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    box-shadow: 10px 10px 10px rgba(8, 25, 30, 0.5);
+}
 @media all and (max-width: 1080px) {
     .container {
         width: 90%;

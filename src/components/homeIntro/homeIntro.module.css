@@ -34,6 +34,24 @@
 .themeButtonContainer {
     display: none;
 }
+@media all and (max-height: 820px) {
+    @media all and (min-width: 780px) {
+        .bigText {
+            font-size: 2.5rem;
+            line-height: 3.5rem;
+        }
+        .smallTextContainer {
+            max-width: 75vw;
+        }
+        .smallText {
+            font-size: 0.8rem;
+            line-height: 1.3rem;
+        }
+        .buttonRow {
+            margin: 2rem 0;
+        }
+    }
+}
 @media all and (max-width: 1280px) {
     .smallTextContainer {
         max-width: 50vw;

@@ -2,9 +2,13 @@ import ResumeContact from '../resumeContact/resumeContact'
 import ResumeGridSection from '../resumeGridSection/resumeGridSection'
 import styles from './resumeGrid.module.css'
 
-const ResumeGrid = () => {
+interface resumeGridProps {
+    miniApp?: boolean
+}
+
+const ResumeGrid = ({ miniApp }: resumeGridProps) => {
     return (
-        <div className={styles.container}>
+        <div className={miniApp ? styles.containerMiniApp : styles.container}>
             <p className={styles.title}>Summary</p>
             <ResumeGridSection
                 text=" I'm a professional software developer, my skills include
@@ -65,7 +69,7 @@ const ResumeGrid = () => {
             />
 
             <p className={styles.title}>Contact information</p>
-            <ResumeContact />
+            <ResumeContact miniApp={miniApp} />
         </div>
     )
 }

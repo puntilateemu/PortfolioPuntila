@@ -5,9 +5,13 @@ import styles from './homeIntroMiniApp.module.css'
 
 interface homeIntroMiniAppProps {
     onClickMyWork: () => void
+    onClickContact: () => void
 }
 
-const HomeIntroMiniApp = ({ onClickMyWork }: homeIntroMiniAppProps) => {
+const HomeIntroMiniApp = ({
+    onClickMyWork,
+    onClickContact,
+}: homeIntroMiniAppProps) => {
     return (
         <div className={styles.container}>
             <div>
@@ -30,7 +34,12 @@ const HomeIntroMiniApp = ({ onClickMyWork }: homeIntroMiniAppProps) => {
                     buttonStyle="fill"
                     onClick={onClickMyWork}
                 />
-                <Button miniApp text="Contact Me" buttonStyle="empty" />
+                <Button
+                    miniApp
+                    text="Contact Me"
+                    buttonStyle="empty"
+                    onClick={onClickContact}
+                />
             </div>
             <SocialLinks />
             <div className={styles.themeButtonContainer}>

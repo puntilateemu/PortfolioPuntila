@@ -8,6 +8,17 @@
     justify-items: start;
     align-items: start;
 }
+.containerMiniApp {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 1.8rem;
+    justify-items: start;
+    align-items: start;
+    padding-top: 1rem;
+}
 .title {
     font-size: 1.5rem;
     letter-spacing: 0.1rem;

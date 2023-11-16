@@ -5,8 +5,21 @@
     border-left: 2px solid var(--name-letter-color);
 }
 
+@media all and (max-height: 700px) {
+    .divider {
+        display: none;
+    }
+}
+
 @media all and (max-width: 780px) {
     .dividerHideMobile {
         display: none;
+    }
+}
+@media all and (max-width: 480px) {
+    @media all and (min-height: 650px) {
+        .divider {
+            display: block;
+        }
     }
 }

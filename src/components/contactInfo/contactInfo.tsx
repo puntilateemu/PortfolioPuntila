@@ -1,8 +1,12 @@
 import styles from './contactInfo.module.css'
 
-const ContactInfo = () => {
+interface contactInfoProps {
+    miniApp?: boolean
+}
+
+const ContactInfo = ({ miniApp }: contactInfoProps) => {
     return (
-        <div className={styles.container}>
+        <div className={miniApp ? styles.containerMiniApp : styles.container}>
             <div>
                 <h3>
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -10,7 +14,7 @@ const ContactInfo = () => {
                     you.
                 </h3>
             </div>
-            <div className={styles.row}>
+            <div className={miniApp ? styles.rowMiniApp : styles.row}>
                 <h3>Email</h3>
                 <h3 className={styles.text}>puntilateemu@gmail.com</h3>
             </div>

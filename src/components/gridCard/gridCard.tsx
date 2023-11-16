@@ -32,11 +32,15 @@ const GridCard = (portfolio: portfolio) => {
             >
                 <h3 className={styles.header}>{portfolio.title}</h3>
                 <p className={styles.text}>{portfolio.introText}</p>
-                <Button
-                    url={`/portfolio/${portfolio.title}`}
-                    buttonStyle="small"
-                    text="View More"
-                />
+                {portfolio.miniApp ? (
+                    <Button buttonStyle="small" text="View More" />
+                ) : (
+                    <Button
+                        url={`/portfolio/${portfolio.title}`}
+                        buttonStyle="small"
+                        text="View More"
+                    />
+                )}
             </div>
         </div>
     )

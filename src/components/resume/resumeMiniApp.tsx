@@ -1,9 +1,9 @@
 import ResumeGrid from '../resumeGrid/resumeGrid'
-import styles from './resume.module.css'
+import styles from './resumeMiniApp.module.css'
 import Image from 'next/image'
 import resumeImage from '../../../public/teemu_puntila.jpeg'
 
-const ResumeSection = () => {
+const ResumeMiniApp = () => {
     return (
         <div className={styles.container}>
             <div className={styles.headerRow}>
@@ -18,9 +18,9 @@ const ResumeSection = () => {
                     quality={100}
                 />
             </div>
-            <ResumeGrid />
+            <ResumeGrid miniApp />
         </div>
     )
 }
 
-export default ResumeSection
+export default ResumeMiniApp

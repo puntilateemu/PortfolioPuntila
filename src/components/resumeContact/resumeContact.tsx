@@ -8,10 +8,14 @@ import websiteIcon from '../../../public/website-icon.svg'
 import homeIcon from '../../../public/home-icon.svg'
 import linkedInIcon from '../../../public/linkedIn-icon.svg'
 
-const ResumeContact = () => {
+interface resumeContactProps {
+    miniApp?: boolean
+}
+
+const ResumeContact = ({ miniApp }: resumeContactProps) => {
     return (
         <div className={styles.container}>
-            <div className={styles.grid}>
+            <div className={miniApp ? styles.gridMiniApp : styles.grid}>
                 <div className={styles.row}>
                     <Image
                         src={mailIcon}
