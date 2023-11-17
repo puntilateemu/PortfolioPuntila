@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
+import './globals.css'
 import { Lato } from 'next/font/google'
 import { Theme } from '@/state/context/theme'
-import './globals.css'
 import NavBar from '@/components/navBar/navBar'
 import Background from '@/utils/background/background'
 
 const lato = Lato({
     subsets: ['latin'],
     weight: '400',
+    display: 'swap',
     preload: true,
 })
 
@@ -30,10 +31,6 @@ export default function RootLayout({
         <html lang="en">
             <head>
                 <link rel="icon" type="icon" href="/favicon.ico" />
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                />
                 <meta name="color-scheme" content="dark light" />
                 <meta name="theme-color" content="#000000" />
                 <link rel="apple-touch-icon" type="icon" href="/favicon.ico" />
@@ -47,14 +44,14 @@ export default function RootLayout({
                     property="og:description"
                     content="Teemu Puntila Portfolio and Projects Webpage."
                 />
-                <meta property="og:image" content="/favicon.png" />
-                <meta name="twitter:card" content="/favicon.png" />
+                <meta property="og:image" content="/favicon.svg" />
+                <meta name="twitter:card" content="/favicon.svg" />
                 <meta name="twitter:title" content="Teemu Puntila" />
                 <meta
                     name="twitter:description"
                     content="Teemu Puntila Portfolio and Projects Webpage."
                 />
-                <meta name="twitter:image" content="/favicon.png" />
+                <meta name="twitter:image" content="/favicon.svg" />
             </head>
             <body className={lato.className}>
                 <Theme>

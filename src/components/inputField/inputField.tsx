@@ -40,6 +40,7 @@ const InputField = ({
                 <input
                     className={error ? styles.inputError : styles.input}
                     type={type}
+                    autoComplete={name}
                     name={name}
                     placeholder={
                         error ? placeHolder + ' is required' : placeHolder
